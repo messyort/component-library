@@ -6,7 +6,7 @@
   "version": "0.1.0",
   "description": "A simple template for a custom React component library",
   "scripts": {
-    "rollup": "rollup -c",
+    "rollup": "rimraf dist && rollup -c",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -45,8 +45,13 @@
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
     "typescript": "^4.4.4",
+    "rollup-plugin-peer-deps-external": "^2.2.4"
+  },
+  "peerDependencies": {
     "@fluentui/react-components": "^9.27.3",
-    "@fluentui/react-datepicker-compat": "^0.2.4"
+    "@fluentui/react-datepicker-compat": "^0.2.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
