@@ -10,7 +10,7 @@ import { terser } from "rollup-plugin-terser";
 
 export default [
   {
-    input: "src/index.tsx",
+    input: "src/index.ts",
     output: [
       {
         file: packageJson.main,
@@ -28,7 +28,7 @@ export default [
       resolve({
         extensions: [".ts", ".tsx", ".js", ".ttf"],
         preferBuiltins: true,
-        // browser: true,
+        browser: true,
       }),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
