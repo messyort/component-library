@@ -6,7 +6,7 @@ import json from "@rollup/plugin-json";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import packageJson from "./package.json" assert { type: "json" };
 import processEnv from "rollup-plugin-process-env";
-import { terser } from "rollup-plugin-terser";
+// import { terser } from "rollup-plugin-terser";
 
 export default [
   {
@@ -34,7 +34,7 @@ export default [
       typescript({ tsconfig: "./tsconfig.json" }),
       json(),
       processEnv(),
-      terser()
+      // terser()
     ],
   },
   {
